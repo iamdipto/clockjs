@@ -1,37 +1,106 @@
-## Welcome to GitHub Pages
+<!doctype html>
+<html lang="en">
 
-You can use the [editor on GitHub](https://github.com/iamdipto/clockjs/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+<head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+      <!-- Bootstrap CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
-### Markdown
+      <title>clock</title>
+      <script>
+            let a
+            let date
+            let t
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+           setInterval(() => {
+                 
+           
+ a=new Date();
+ 
+  date=a.toLocaleDateString(undefined,options);
+  time=a.getHours()+":"+a.getMinutes()+":"+a.getSeconds()
+ document.getElementById('time').innerHTML=time +" on "+ date
+}, 1000);
+      </script>
+</head>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+<body>
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+      <!-- Optional JavaScript; choose one of the two! -->
 
-- Bulleted
-- List
+      <!-- Option 1: Bootstrap Bundle with Popper -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+            crossorigin="anonymous"></script>
 
-1. Numbered
-2. List
+      <!-- Option 2: Separate Popper and Bootstrap JS -->
+      <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
 
-**Bold** and _Italic_ and `Code` text
+      <dic class="conatainer">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                  <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Navbar</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                              aria-expanded="false" aria-label="Toggle navigation">
+                              <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                          <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                          <a class="nav-link" href="#">Link</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                Dropdown
+                                          </a>
+                                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                <li>
+                                                      <hr class="dropdown-divider">
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                          </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                          <a class="nav-link disabled" href="#" tabindex="-1"
+                                                aria-disabled="true">Disabled</a>
+                                    </li>
+                              </ul>
+                              <form class="d-flex">
+                                    <input class="form-control me-2" type="search" placeholder="Search"
+                                          aria-label="Search">
+                                    <button class="btn btn-outline-success" type="submit">Search</button>
+                              </form>
+                        </div>
+                  </div>
+            </nav>
+            <div class="container" my-4>
+                  <div class="jumbotron">
+                        <h1 class="display-4">Current Time is:<span id="time" </h1>
+                                    <p class="lead">we have got you covered</p>
+                                    <hr class="my-4">
+                                    <p>We are here to show the time of different countries</p>
+                                    <p class="lead">
+                                          <a class="btn btn-primary btn-lg" href="#" role="button">Browse Times</a>
+                                    </p>
+                  </div>
+            </div>
 
-[Link](url) and ![Image](src)
-```
+      </dic>
+</body>
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/iamdipto/clockjs/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+</html>
